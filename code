@@ -1,0 +1,145 @@
+Console.WriteLine("Would you like to play this game? type yes or no");
+            string userInput12 = Console.ReadLine();
+            while (userInput12 == "yes" || userInput12 != "no") //loop if the user says yes
+            {
+                Console.WriteLine("When you choose which path to follow type in the number that is in paranthesis after a choice and press enter.");
+                Console.WriteLine("\n");
+                string userInput;
+
+                Console.WriteLine("You are taking a walk at the local farmer's market and find someone selling fish. Do you buy it(1) or ignore it(2)?");
+                userInput = Console.ReadLine();
+                if (userInput == "1") //if user chooses fish 
+                {
+                    Console.WriteLine("You have chosen to buy the fish. You cook it and serve it to your family and you find out they get food poisoning. \n Do you choose to sue the seller(11) or take your family to the hospital(12)?");
+                    string userInput2 = Console.ReadLine();
+                    if (userInput2 == "11") //sue seller
+                    {
+                        Console.WriteLine("You have chosen to sue the seller, and you get a lot of money from it. \n Do you choose to buy a car(111) or use that money for your family(112)?");
+                        string userInput3 = Console.ReadLine();
+                        if (userInput3 == "111")
+                        {
+                            C();
+                        }
+                        if (userInput3 == "112")
+                        {
+                            D();
+                        }
+
+
+                    }
+                    if (userInput2 == "12")//hospital
+                    {
+                        Console.WriteLine("You have chosen to take your family to the hospital. \n Will you let the doctors do surgery(121) or just take the antibiotics(122)");
+                        string userInput4 = Console.ReadLine();
+                        if (userInput4 == "121")
+                        {
+                            A();
+                        }
+                        if (userInput4 == "122")
+                        {
+                            B();
+                        }
+
+                    }
+                }
+                if (userInput == "2") //ignores fish
+                {
+                    Console.WriteLine("You have chosen to ignore the fish. You serve vegetables to your family but they hate it.\n Do you go back to the market to buy the fish(21) or tell your family to just eat the veggies(22)?");
+                    string userInput5 = Console.ReadLine();
+                    if (userInput5 == "21") //ran out of fish
+                    {
+                        Console.WriteLine("You have choosen to go back to the store to get fish, but they ran out. \n Do you go back to the house to tell your family(211) or get lobster instead(212)?");
+                        string userInput6 = Console.ReadLine();
+                        if (userInput6 == "211") //finish eating veggies
+                        {
+                            E();
+                        }
+                        if (userInput6 == "212")
+                        {
+                            F();
+                        }
+                    }
+                    if (userInput5 == "22")
+                    {
+                        Console.WriteLine("They eat the veggies and to reward them, do you give them ice cream(221) or cookies(222)?");
+                        string userInput7 = Console.ReadLine();
+                        if (userInput7 == "221")
+                        {
+                            G();
+                        }
+                        if (userInput7 == "222")
+                        {
+                            H();
+                        }
+                    }
+                    
+                   
+                }
+
+                Console.ReadLine();
+                break; //prevents the loop from repeating in a infinite loop
+
+            }
+            while (userInput12 != "yes" || userInput12 == "no") // loop the user doesn't want to play game. Doesn't do anything
+            {
+
+
+
+
+                break; 
+
+
+            }
+
+
+
+
+        }
+        //each function represents a different ending (8)
+        static void A() //function for 121
+        {
+            Console.WriteLine("You have allowed the doctor to do surgery on your family. He cures them and they are all healthy.");
+            Console.WriteLine("Thanks for playing!");
+        }
+        static void B() //function for 122
+        {
+            Console.WriteLine("You have choosen to take the antibiotics for your family. Unfortunately it doesn't cure them and they die");
+            Console.WriteLine("Thanks for playing!");
+
+        }
+        static void C() //function for 111
+        {
+            Console.WriteLine("You have choosen to buy a car, but unfortunately your family dies from the food poisoning because they had no care");
+            Console.WriteLine("Thanks for playing!");
+
+        }
+        static void D() //function for 112
+        {
+            Console.WriteLine("You have choosen to spend the money for your family's health. They survive are all healthy and well.");
+            Console.WriteLine("Thanks for playing!");
+
+        }
+        static void E() //function for 211
+        {
+            Console.WriteLine("You have choosen to go to the house and tell them there is no fish. \n They finish eating the vegetables and are healthy and well ");
+            Console.WriteLine("Thanks for playing!");
+        }
+        static void F() //function for 212
+        {
+            Console.WriteLine("You take the lobster home and cook it to serve. \n You find out it has high levels of mercury in it, and your family gets neuro damage. They get brain cancer");
+            Console.WriteLine("Thanks for playing!");
+        }
+        static void G() //function for 221
+        {
+            Console.WriteLine("They eat the ice cream and enjoy it a lot.");
+            Console.WriteLine("Thanks for playing!");
+        }
+        static void H() //function for 222
+        {
+            Console.WriteLine("They eat the cookies but have a really bad stomach ache and you need to rush them too the emergency room");
+            Console.WriteLine("Thanks for playing!");
+        }
+    }
+}
+
+        
